@@ -15,6 +15,7 @@
       <button
         class="
           p-2
+          select-none
           text-sm
           font-bold
           hover:text-gray-900
@@ -36,7 +37,7 @@
     <div class="more-container sm:hidden relative">
       <button
         v-show="!showMoreModal"
-        class="p-2 hover:bg-gray-100 rounded-md text-gray-500"
+        class="p-2 select-none hover:bg-gray-100 rounded-md text-gray-500"
         @click="showMoreModal = true"
       >
         <svg
@@ -52,7 +53,7 @@
       </button>
       <button
         v-show="showMoreModal"
-        class="p-2 hover:bg-gray-100 rounded-md text-red-400 hover:text-red-500"
+        class="p-2 select-none hover:bg-gray-100 rounded-md text-red-400 hover:text-red-500"
         @click="showMoreModal = false"
       >
         <svg
@@ -89,6 +90,7 @@
           class="
             px-4
             py-2
+            select-none
             text-sm text-center
             font-bold
             hover:text-gray-900
@@ -135,7 +137,7 @@ export default {
     onMounted(() => {
       data.changeURL = (link, event) => {
         if (link !== "All" && event && event.ctrlKey && event.shiftKey) {
-          window.location.href = `${__BASE__}folder/${link.toLowerCase()}`;
+          window.location.href = `${__BASE__}folderslist/${link.toLowerCase()}`;
         } else {
           window.location.href = `${__BASE__}${
             data.baseURL
