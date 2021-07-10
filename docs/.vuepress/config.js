@@ -23,6 +23,17 @@ module.exports = {
       },
     }
   },
+  // bundler: '@vuepress/webpack',
+  // bundlerConfig: {
+  //   postcss: {
+  //     postcssOptions: {
+  //       plugins: {
+  //         tailwindcss: {},
+  //         autoprefixer: {},
+  //       },
+  //     },
+  //   },
+  // },
   plugins: [
     require('./plugins/addTime.js'),
     [require('./plugins/createHomePage.js'),
@@ -64,7 +75,10 @@ module.exports = {
     }
   },
   extendsMarkdown: (md) => {
-    md.use(require('@neilsustc/markdown-it-katex'), {output: 'html'})
+    md.use(require('@neilsustc/markdown-it-katex'), { output: 'html' });
+    md.use(require('markdown-it-mark'));
+    md.use(require('markdown-it-sub'));
+    md.use(require('markdown-it-sup'));
   },
   define: {
     __BASE__: "/Collection/",
