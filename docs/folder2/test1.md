@@ -8,6 +8,8 @@ collectionOrder: 1
 # Test1
 content 1
 
+$x+y=1$
+
 ## Heading2
 
 content 2
