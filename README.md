@@ -1,3 +1,5 @@
+:warning: This project is expired and no longer in maintenance, please check out the successor reposity **[BlogiNote](https://github.com/Benbinbin/BlogiNote)**
+
 # Collection
 
 ## Introduction
